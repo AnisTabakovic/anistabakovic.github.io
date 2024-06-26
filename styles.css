@@ -296,3 +296,154 @@ footer p {
 .project-link:visited {
     color: #2a2a2a;
 }
+
+/* Media Queries für Responsivität */
+@media (max-width: 1200px) {
+    .navbar-links {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .profile-section {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .profile-details {
+        margin-left: 0;
+        text-align: center;
+    }
+
+    .about-me {
+        margin-left: 20px;
+        margin-right: 20px;
+    }
+
+    .skills-table {
+        width: 100%;
+    }
+}
+
+@media (max-width: 768px) {
+    .profile-picture img {
+        width: 150px;
+    }
+
+    .profile-details h1 {
+        font-size: 2em;
+    }
+
+    .profile-details h2,
+    .profile-details h3 {
+        font-size: 1.2em;
+    }
+
+    .about-me h2 {
+        font-size: 1.5em;
+    }
+
+    .about-me p {
+        font-size: 1em;
+    }
+
+    .project img {
+        height: 60px;
+    }
+
+    .project-details h2 {
+        font-size: 1.2em;
+    }
+
+    .project-details p {
+        font-size: 1em;
+    }
+}
+
+@media (max-width: 480px) {
+    .navbar .logo,
+    .navbar-links a {
+        font-size: 1.5em;
+    }
+
+    .profile-picture img {
+        width: 100px;
+    }
+
+    .profile-details h1 {
+        font-size: 1.5em;
+    }
+
+    .profile-details h2,
+    .profile-details h3 {
+        font-size: 1em;
+    }
+
+    .about-me h2 {
+        font-size: 1.2em;
+    }
+
+    .about-me p {
+        font-size: 0.9em;
+    }
+
+    .project img {
+        height: 40px;
+    }
+
+    .project-details h2 {
+        font-size: 1em;
+    }
+
+    .project-details p {
+        font-size: 0.9em;
+    }
+}
+
+/* Flexibles Layout für Bilder und Videos */
+img, video {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Rest of the CSS code remains the same */
+
+/* Hamburger Menu */
+.hamburger-menu {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.hamburger-menu .bar {
+    width: 25px;
+    height: 3px;
+    background-color: #fff;
+    margin: 4px 0;
+    transition: 0.4s;
+}
+
+@media (max-width: 768px) {
+    .navbar-links {
+        display: none;
+        flex-direction: column;
+        gap: 10px;
+        position: absolute;
+        top: 60px;
+        right: 20px;
+        background-color: #2a2a2a;
+        padding: 20px;
+        border-radius: 10px;
+    }
+
+    .navbar-links a {
+        font-size: 1.5em;
+    }
+
+    .hamburger-menu {
+        display: flex;
+    }
+
+    .navbar-links.active {
+        display: flex;
+    }
+}
