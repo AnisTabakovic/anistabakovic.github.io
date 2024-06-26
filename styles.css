@@ -1,31 +1,235 @@
 body {
+    font-family: 'Courier New', Courier, monospace;
+    background-color: #2a2a2a; /* Ein ticken helleres Grau */
+    color: #e0e0e0;
     margin: 0;
     padding: 0;
+    min-height: 100vh; /* Setzt die minimale Höhe des Body auf 100% der Viewport-Höhe */
+    display: flex;
+    flex-direction: column;
+}
+
+.navbar {
+    display: flex;
+    justify-content: center; /* Zentriere die Navbar */
+    align-items: center;
+    background-color: #2a2a2a; /* Ein ticken helleres Grau */
+    padding: 20px 20px;
+}
+
+.navbar .logo {
+    margin-right: auto; /* Logo bleibt links */
+    color: #fff;
+    text-decoration: none;
+    font-size: 2em;
+}
+
+.navbar-links {
+    display: flex;
+    gap: 30px; /* Abstand zwischen Links erhöht */
+}
+
+.navbar-links a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 2em;
+}
+
+.navbar-links a:hover {
+    color: #fff;
+}
+
+.profile-section {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
-    background-color: #2c2c2c;
-    font-family: Arial, sans-serif;
+    margin-top: 50px;
+    text-align: left;
 }
 
-.container {
-    text-align: center;
-    background-color: #3c3c3c;
-    padding: 20px;
-    border: 2px solid #444444;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+.profile-picture img {
+    width: 250px; /* Größe angepasst */
+    height: auto;
+    border: none; /* Kein Rand */
 }
 
-h1 {
+.profile-details {
+    margin-left: 30px; /* Abstand zwischen Bild und Text */
+}
+
+.profile-details h1 {
+    font-size: 2.5em; /* Schriftgröße angepasst */
     margin: 0;
-    font-size: 24px;
-    color: #ffffff;
 }
 
-p {
-    margin: 10px 0 0;
-    font-size: 18px;
-    color: #bbbbbb;
+.profile-details h2 {
+    font-size: 1.5em;
+    color: #fff;
+    margin: 5px 0 0;
+}
+
+.profile-details h3 {
+    font-size: 1.2em;
+    color: #fff;
+    margin: 5px 0 0;
+}
+
+.about-me {
+    margin-top: 50px;
+    margin-left: calc(50% - 400px); /* Ensuring the text aligns with the profile details */
+    max-width: 800px;
+    text-align: left; /* Text linksbündig */
+    flex-grow: 1; /* Lässt diesen Abschnitt wachsen, um den verbleibenden Platz einzunehmen */
+}
+
+.about-me h2 {
+    color: #fff;
+    font-size: 2em;
+    margin-bottom: 10px;
+}
+
+.about-me p {
+    font-size: 1.2em;
+    margin: 0;
+}
+
+/* Neuer CSS-Code für die CV-Seite */
+.content {
+    max-width: 800px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: #2a2a2a; /* Ein ticken helleres Grau */
+    border-radius: 10px;
+}
+
+.content h1 {
+    font-size: 2.5em;
+    color: #fff;
+    margin-bottom: 20px;
+}
+
+.content h2 {
+    font-size: 2em;
+    color: #fff;
+    margin-top: 20px;
+}
+
+.content p {
+    font-size: 1.2em;
+    line-height: 1.6em;
+}
+
+.content a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.content a:hover {
+    text-decoration: underline;
+}
+
+hr {
+    border: 0;
+    height: 1px;
+    background: #fff; /* Weiß */
+    margin: 20px 0;
+}
+
+/* Entfernen der Boxen */
+.cv-section {
+    padding: 20px;
+    margin-bottom: 20px;
+    background-color: #2a2a2a; /* Ein ticken helleres Grau */
+    border-radius: 10px;
+    border: none; /* Kein Rahmen */
+}
+
+.cv-section h2 {
+    margin-top: 0;
+}
+
+footer {
+    background-color: #2a2a2a; /* Ein ticken helleres Grau */
+    padding: 20px;
+    text-align: center;
+    border-top: 1px solid #fff;
+    margin-top: auto; /* Platziert den Footer am unteren Rand */
+}
+
+footer p {
+    color: #e0e0e0;
+    font-size: 1.2em;
+    margin: 0;
+}
+
+.footer-links {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin-top: 10px;
+}
+
+.footer-links a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.2em;
+}
+
+.footer-links a:hover {
+    color: #fff;
+}
+
+/* Skillchart Styles */
+.skills-chart {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.skills-table {
+    width: 48%;
+    margin-bottom: 20px;
+}
+
+.skills-category {
+    margin-bottom: 20px;
+}
+
+.skills-category h3 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+    color: #fff;
+}
+
+.skills-category ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.skills-category ul li {
+    margin-bottom: 5px;
+    font-size: 1.2em;
+}
+
+.skill-level {
+    color: #ffba08;
+}
+
+.legend {
+    width: 100%;
+}
+
+.legend h3 {
+    font-size: 1.5em;
+    color: #fff;
+}
+
+.legend ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.legend ul li {
+    font-size: 1.2em;
+    margin-bottom: 5px;
 }
